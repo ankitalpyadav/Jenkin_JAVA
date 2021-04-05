@@ -39,4 +39,9 @@ public class TestMaths {
 			}
 		});
 	}
+	
+	@Test
+	public void testSquare() {
+		assertEquals(25, maths.square(5));
+	}
 }
