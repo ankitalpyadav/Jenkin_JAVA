@@ -4,33 +4,30 @@ public class Pizza {
 	double price;
 	double top = 50;
 	public double order(String size, int toppings) {
-		switch(size) {
-		case "S":
+		if (size=="S") {
 			if (toppings >=2 && toppings <= 5)  {
 				top = top * toppings; 
 				double price = 100 + top;
 				return price;
 			}
-			break;
-		
-		case "M":
+		}
+		else if(size=="M") {
 			if (toppings >=2 && toppings <= 5) {
 				top = top * toppings; 
 				double price = 200 + top;
 				return price;
 			}
-			break;
-	
-		case "L":
+		}
+		
+		else if(size=="L") {
 			if (toppings >=2 && toppings <= 5) {
 				top = top * toppings; 
 				double price = 300 + top;
 				return price;
 			}
-			break;
-			
-		default:
-            System.out.println("no match");
+		}
+		else {
+			System.out.println("Wrong option");
 		}
 		return price;
 	}
