@@ -10,19 +10,18 @@ pipeline{
 			}
 		}
 		
+		stage('Test stage'){
+			steps{
+				withMaven(maven : 'Mvn'){
+				bat 'mvn -f mvn-math/pom.xml install'
+				}
+			}
+		}
 		
 		stage('Compile stage'){
 			steps{
 				withMaven(maven : 'Mvn'){
 				bat 'mvn -f mvn-math/pom.xml compile'
-				}
-			}
-		}
-		
-		stage('Test stage'){
-			steps{
-				withMaven(maven : 'Mvn'){
-				bat 'mvn -f mvn-math/pom.xml install'
 				}
 			}
 		}
