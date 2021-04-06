@@ -9,11 +9,19 @@ pipeline{
 				}
 			}
 		}
-	
+		
 		stage('Compile stage'){
 			steps{
 				withMaven(maven : 'Mvn'){
-				bat 'mvn -f mvn-math/pom.xml clean compile'
+				bat 'mvn -f mvn-math/pom.xml clean'
+				}
+			}
+		}
+		
+		stage('Compile stage'){
+			steps{
+				withMaven(maven : 'Mvn'){
+				bat 'mvn -f mvn-math/pom.xml compile'
 				}
 			}
 		}
@@ -25,6 +33,11 @@ pipeline{
 				}
 			}
 		}
+	
+		
+		
+		
+		
 	}
 
 
