@@ -10,7 +10,7 @@ pipeline{
 			}
 		}
 		
-		stage('Compile stage'){
+		stage('Clean stage'){
 			steps{
 				withMaven(maven : 'Mvn'){
 				bat 'mvn -f mvn-math/pom.xml clean'
