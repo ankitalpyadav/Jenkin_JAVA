@@ -29,7 +29,7 @@ public class TestTicketRepo {
 	
 	@Test
 	public void testAddPassenger() {
-		Passenger p = new Passenger(1, "Kelly", 23, "Female");
+		Passenger p = new Passenger(3, "Kelly", 23, "Female");
 		assertNotNull(trepo.savePassenger(p,101));
 	}
 	
